@@ -20,6 +20,7 @@
   "homepage": "https://github.com/IP-Sentinel/actions-aws-ssm-params-to-env#readme",
   "dependencies": {
     "@actions/core": "^1.6.0",
+    "@aws-sdk/client-ssm": "^3.39.0",
     "@vercel/ncc": "^0.31.1",
     "aws-sdk": "^2.1021.0"
   }
