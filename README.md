@@ -22,6 +22,7 @@ This GitHub Action retrieves one or more AWS Systems Manager Parameters from a g
     get-children: true           # optional, default false
     decryption: true             # optional, default false
     mask-values: true            # optional, default false
+    expand-json: true            # optional, default false
     prefix: SSM_                 # optional, allows any string value
 ```
 
@@ -33,7 +34,7 @@ AWS Systems Manager Parameter Store path to the parameter.
 (e.g. `ssm-path: /path/to/parameter`)
 
 #### `get-children` (optional)
-Boolean wich imposes to get parameters by path, retrieving all children values. Defaults to false.  
+Boolean which imposes to get parameters by path, retrieving all children values. Defaults to false.  
 (e.g. `get-children: true`)
 
 #### `decryption` (optional)
@@ -50,6 +51,10 @@ Boolean which indicates if extracted values should be masked in GitHub action lo
 #### `prefix` (optional)
 Add prefix in front of environment variable names to be set.
 (e.g. `prefix: TF_VAR_` will export `TF_VAR_ENV_VAR="value"`)
+
+#### `expand-json` (optional)
+Boolean which indicates whether JSON object parameters should be processed by field. Defaults to false.
+(e.g. `decryption: true`)  
 
 ---
 ## Examples

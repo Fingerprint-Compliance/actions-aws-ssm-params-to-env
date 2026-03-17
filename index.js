@@ -11,12 +11,14 @@ async function run_action()
         const region = process.env.AWS_DEFAULT_REGION;
         const decryption = core.getInput('decryption') === 'true';
         const maskValues = core.getInput('mask-values') === 'true';
+        const expandJson = core.getInput('expand-json') === 'true';
 
         const params = await ssm.getParameters(ssmPath, getChildren, decryption, region);
+        
         for (let param of params)
         {
             const parsedValue = parseValue(param.Value);
-            if (typeof(parsedValue) === 'object') // Assume JSON object
+            if (typeof(parsedValue) === 'object' && expandJson) // Assume JSON object
             {
                 core.debug(`parsedValue: ${JSON.stringify(parsedValue)}`);
                 // Assume basic JSON structure
