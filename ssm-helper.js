@@ -1,4 +1,4 @@
-const { SSMClient, GetParametersCommand, paginateGetParametersByPath } = require("@aws-sdk/client-ssm");
+import { SSMClient, GetParametersCommand, paginateGetParametersByPath } from "@aws-sdk/client-ssm";
 
 const getParameters = async (ssmPath, getChildren, decryption, region) => {
     const client = new SSMClient({ region: region });
@@ -36,4 +36,4 @@ const getParameters = async (ssmPath, getChildren, decryption, region) => {
     return parameters;
 }
 
-module.exports = { getParameters };
+export { getParameters };
