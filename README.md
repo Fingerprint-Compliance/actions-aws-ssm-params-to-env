@@ -22,7 +22,7 @@ This GitHub Action retrieves one or more AWS Systems Manager Parameters from a g
     get-children: true           # optional, default false
     decryption: true             # optional, default false
     mask-values: true            # optional, default false
-    expand-json: true            # optional, default false
+    disable-expand-json: true    # optional, default false
     prefix: SSM_                 # optional, allows any string value
 ```
 
@@ -52,9 +52,9 @@ Boolean which indicates if extracted values should be masked in GitHub action lo
 Add prefix in front of environment variable names to be set.
 (e.g. `prefix: TF_VAR_` will export `TF_VAR_ENV_VAR="value"`)
 
-#### `expand-json` (optional)
-Boolean which indicates whether JSON object parameters should be processed by field. Defaults to false.
-(e.g. `decryption: true`)  
+#### `disable-expand-json` (optional)
+Boolean which disables expansion of JSON object parameters into separate environment variables. Defaults to false (JSON objects are expanded by field).
+(e.g. `disable-expand-json: true`)  
 
 ---
 ## Examples
