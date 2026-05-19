@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v2.1.0](https://github.com/Bardavon-Health/actions-aws-ssm-params-to-env/compare/v2.0.0...v2.1.0)
+## [v2.1.0](https://github.com/Bardavon-Health/actions-aws-ssm-params-to-env/compare/v2.0.0...v2.1.0) (2026-05-19)
 
 ### Maintenance
 
