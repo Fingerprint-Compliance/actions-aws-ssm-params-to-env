@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v2.1.0](https://github.com/Bardavon-Health/actions-aws-ssm-params-to-env/compare/v2.0.0...v2.1.0)
+
+### Maintenance
+
+- **Bundle with Rollup** — Replace committed `node_modules` (~27 MB, ~3,350 files) with a single Rollup-bundled `dist/index.js` (~1.7 MB). (#275)
+
 ## [v2.0.0](https://github.com/Bardavon-Health/actions-aws-ssm-params-to-env/compare/v1.5.2...v2.0.0) (2026-05-19)
 
 ### Breaking Changes
