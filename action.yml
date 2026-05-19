@@ -20,6 +20,9 @@ inputs:
   mask-values:
     description: 'Indicates if extracted values should be masked in GitHub action logs'
     required: false
+  disable-expand-json:
+    description: 'Disables expansion of JSON object parameters into separate environment variables'
+    required: false
 runs:
   using: 'node24'
   main: 'index.js'
