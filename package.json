@@ -21,7 +21,7 @@
   "homepage": "https://github.com/IP-Sentinel/actions-aws-ssm-params-to-env#readme",
   "dependencies": {
     "@actions/core": "^3.0.1",
-    "@aws-sdk/client-ssm": "^3.1049.0"
+    "@aws-sdk/client-ssm": "^3.1056.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.2",
